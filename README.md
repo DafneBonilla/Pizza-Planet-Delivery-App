@@ -1,5 +1,11 @@
 # Pizza Planet Delivery App 📱🍕
 
+### **Equipo:**
+
+- Arroyo Martínez Erick Daniel
+- Bonilla Reyes Dafne
+- Hernández Montoya Ricardo
+  
 ## 📲 Uso de Pizza Planet
 
 - **Pantalla de Inicio:** Al iniciar la aplicación, la primera pantalla que se mostrará será la pantalla de inicio. En esta pantalla encontraremos 2 cosas: Un menú drawer y una action bar. Para acceder al menú drawer, es necesario deslizar de izquierda a derecha desde el lateral izquiero de la pantalla. Una vez hecho esto, tendremos un menú con una sola opción, que será `About Us`. Desafortunadamente, tras varios intentos y cambios en el código, no logramos hacer que la action bar y el menú drawer convivieran en la misma activiy, por lo que el menú drawer no reconoce los botones. Sin embargo, toda la implementación de este botón se dejó en el proyecto. Por otro lado, en el action bar encontraremos 4 opciones. Primero, tendremos 2 íconos que nos indican que podemos hacer dos cosas: Iniciar sesión o registrarse, y al final del action bar, indicado con un ícono de 3 puntos, tendremos un mini menú con las opciones de ver el menú de pizzas o leer las políticas de privacidad.
