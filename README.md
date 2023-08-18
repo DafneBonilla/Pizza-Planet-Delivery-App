@@ -1,14 +1,4 @@
-# Proyecto Final
-
-## 📱🍕 Intents y Bases de Datos
-
-**Equipo:**
-
-- Arroyo Martínez Erick Daniel
-- Bonilla Reyes Dafne
-- Hernández Montoya Ricardo
-
----
+# Pizza Planet Delivery App 📱🍕
 
 ## 📲 Uso de Pizza Planet
 
@@ -27,12 +17,7 @@ El siguiente detalle mostrado en la actividad es el detalle del monto a pagar, d
 El último elemento interactivo de la actividad es el metodo de pago representado con un spinner permitiendo escoger entre *Efectivo* o *TDC/TDD*.
 Para finalizar la confirmación se debe seleccionar el boton confirmar y este mostrará un Toast agradeciendo la compra y se enviará a la actividad inicial.
 
-
----
-
 ## ❓ Implementación
-
-Para este proyecto usamos MVC, ...
 
 En la pantalla de inicio tendremos un navigation view implementado en la `activity_menu_drawer`, que llama a la `MainActivityDrawer` en donde al seleccionar el botón de `About Us` se pretende se cargue la `activity_about_us`. Esta es toda la funcionalidad del menú drawer. Por otro lado, el action bar será implementado por un drawer en la `drawer` activity. En este layout tenemos varios items con íconos y texto que nos indican las acciones que podemos realizar. Este menú es cargado por la `ActionBarTest`, en donde se implementan los métodos que cargan a la action bar en la pantalla de inicio y que cargan según la acción, una respectiva pantalla.
 
@@ -50,7 +35,7 @@ Tambien se implemlento la clase `ModeloComanda` de forma muy similar a la clase 
 **NOTA:** Cómo puede observar la conexión a la base de datos no se cierra después de cada operación. Pues dado que,
 se puede establecer contacto con la base de datos desde cualquier punto de la aplicación, sí en un contexto se cerrara la conexión, entonces seguramente al intentar realizar una operación cualquiera `(CRUD)`, la misma arrojaría una excepción. 
 
-Por tanto, dado el alcance del proyecto, se opto por eliminar la clausura de la conexión. Somos concientes de las implicaciones de esta decisión. Sin embargo, se consultó con los ayudantes, cuya opinión secundo nuestra implementación. 
+Por lo tanto, dado el alcance del proyecto, se optó por eliminar la clausura de la conexión. Somos concientes de las implicaciones de esta decisión. Sin embargo, se consultó con los ayudantes, cuya opinión secundo nuestra implementación. 
 
 La excepción que se arroja al cerrar la conexción es : 
 `java.lang.IllegalStateException: Cannot perform this operation because the connection pool has been closed`.
