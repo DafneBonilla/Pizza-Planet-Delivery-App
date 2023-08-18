@@ -7,7 +7,8 @@
 - Hernández Montoya Ricardo
   
 ## 📲 Uso de Pizza Planet
-
+<div align="justify">
+  
 - **Pantalla de Inicio:** Al iniciar la aplicación, la primera pantalla que se mostrará será la pantalla de inicio. En esta pantalla encontraremos 2 cosas: Un menú drawer y una action bar. Para acceder al menú drawer, es necesario deslizar de izquierda a derecha desde el lateral izquiero de la pantalla. Una vez hecho esto, tendremos un menú con una sola opción, que será `About Us`. Desafortunadamente, tras varios intentos y cambios en el código, no logramos hacer que la action bar y el menú drawer convivieran en la misma activiy, por lo que el menú drawer no reconoce los botones. Sin embargo, toda la implementación de este botón se dejó en el proyecto. Por otro lado, en el action bar encontraremos 4 opciones. Primero, tendremos 2 íconos que nos indican que podemos hacer dos cosas: Iniciar sesión o registrarse, y al final del action bar, indicado con un ícono de 3 puntos, tendremos un mini menú con las opciones de ver el menú de pizzas o leer las políticas de privacidad.
 
 - **Inicio de Sesión:** Esta actividad le permite al usuario iniciar sesión en la aplicación. La actividad espera recibir dos cosas: *Correo Electrónico* y *Contraseña*. La actividad controla el formato de las entradas, es decir, antes de realizar la consulta a la base de datos, se verifica el formato del correo, de tal forma que los únicos dominios válidos son `@gmail.com` y `@ciencias.unam.mx`. Así como la longitud de la contraseña, tal que debe ser mayor a siete caracteres.
@@ -22,9 +23,11 @@ Una vez ingrsada una orden válida, esta será guardada para posteriormente ser 
 El siguiente detalle mostrado en la actividad es el detalle del monto a pagar, desglosando los articulos, el costo de envío y la propina para el repartidor. La propia se asigna mediante 3 botones ($10, $20 o $30) y al selecciónar cada uno se actualizará el monto total de la orden.
 El último elemento interactivo de la actividad es el metodo de pago representado con un spinner permitiendo escoger entre *Efectivo* o *TDC/TDD*.
 Para finalizar la confirmación se debe seleccionar el boton confirmar y este mostrará un Toast agradeciendo la compra y se enviará a la actividad inicial.
+</div>
 
 ## ❓ Implementación
-
+<div align="justify">
+  
 En la pantalla de inicio tendremos un navigation view implementado en la `activity_menu_drawer`, que llama a la `MainActivityDrawer` en donde al seleccionar el botón de `About Us` se pretende se cargue la `activity_about_us`. Esta es toda la funcionalidad del menú drawer. Por otro lado, el action bar será implementado por un drawer en la `drawer` activity. En este layout tenemos varios items con íconos y texto que nos indican las acciones que podemos realizar. Este menú es cargado por la `ActionBarTest`, en donde se implementan los métodos que cargan a la action bar en la pantalla de inicio y que cargan según la acción, una respectiva pantalla.
 
 Para la parte del menú tenemos al layout `activity_menu`, en este encontraremos toda la interfaz de las pizzas, imagenes, spinner, contenedores y text view. Esta activity llama a la `MainActivity` que a su vez carga a `Comanda`, en donde tendremos solo la implementación del botón para ordenar y el registro de los spinners que nos indicarán las cantidad total a pagar. `Comanda` además atrapa un usuario y en caso de no recibirlo, no procesa la orden.
@@ -40,6 +43,8 @@ Tambien se implemlento la clase `ModeloComanda` de forma muy similar a la clase 
 
 **NOTA:** Cómo puede observar la conexión a la base de datos no se cierra después de cada operación. Pues dado que,
 se puede establecer contacto con la base de datos desde cualquier punto de la aplicación, sí en un contexto se cerrara la conexión, entonces seguramente al intentar realizar una operación cualquiera `(CRUD)`, la misma arrojaría una excepción. 
+</div>
+
 
 Por lo tanto, dado el alcance del proyecto, se optó por eliminar la clausura de la conexión. Somos concientes de las implicaciones de esta decisión. Sin embargo, se consultó con los ayudantes, cuya opinión secundo nuestra implementación. 
 
